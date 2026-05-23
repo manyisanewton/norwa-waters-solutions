@@ -12,7 +12,6 @@ import {
 import { AnimatedItem, AnimatedSection } from "@/components/animated";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { PageHero } from "@/components/page-hero";
 import { assets, services } from "@/lib/site-data";
 
 const icons = [
@@ -31,10 +30,25 @@ export default function ServicesPage() {
     <div className="site-shell" id="top">
       <Navbar />
       <main className="main-content">
-        <PageHero
-          eyebrow="Our Services"
-          title="Water treatment services for every project stage"
-        />
+        <AnimatedSection className="service-hero">
+          <div className="service-hero__content">
+            <p className="eyebrow">Our Services</p>
+            <h1>Water treatment services for every project stage</h1>
+            <p>
+              Practical systems for clean water, process water, wastewater, and
+              long-term plant performance.
+            </p>
+          </div>
+          <div className="service-hero__right">
+            <Image
+              alt="Pouring clean water into a glass"
+              height={620}
+              priority
+              src="/assets/service hero background image/service hero.png"
+              width={900}
+            />
+          </div>
+        </AnimatedSection>
 
         <AnimatedSection className="services-page-grid">
           <div className="service-grid">

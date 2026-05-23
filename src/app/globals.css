@@ -219,6 +219,65 @@ video {
   max-width: 640px;
 }
 
+.service-hero {
+  align-items: center;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 0;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1fr);
+  min-height: 620px;
+  overflow: hidden;
+  padding: 0 0 clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3.5rem);
+  position: relative;
+}
+
+.service-hero__content {
+  max-width: 690px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-hero__right {
+  align-self: stretch;
+  min-height: 520px;
+  position: relative;
+}
+
+.service-hero__right::before {
+  background: linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0.84) 20%, rgba(255, 255, 255, 0) 48%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.service-hero__right img {
+  width: 100%;
+  height: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  object-position: center right;
+}
+
+.service-hero h1 {
+  color: var(--charcoal);
+  font-size: clamp(2.5rem, 4.4vw, 4.35rem);
+  font-weight: 430;
+  letter-spacing: 0;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.service-hero p:not(.eyebrow) {
+  color: var(--slate-gray);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 1.35rem 0 0;
+  max-width: 560px;
+}
+
 .section-pad {
   padding: var(--section) clamp(1rem, 4vw, 3.5rem);
 }
@@ -956,8 +1015,22 @@ video {
   .services-page-grid,
   .quote-layout,
   .about-intro,
-  .hero__inner {
+  .hero__inner,
+  .service-hero {
     grid-template-columns: 1fr;
+  }
+
+  .service-hero {
+    min-height: auto;
+    padding: 0 clamp(1rem, 4vw, 3.5rem) 0;
+  }
+
+  .service-hero__right {
+    min-height: 420px;
+  }
+
+  .service-hero__right::before {
+    background: linear-gradient(180deg, var(--white) 0%, rgba(255, 255, 255, 0.5) 24%, rgba(255, 255, 255, 0) 52%);
   }
 
   .hero-proof {

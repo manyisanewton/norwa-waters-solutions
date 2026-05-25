@@ -3,13 +3,13 @@ import Link from "next/link";
 import {
   ArrowRight,
   Droplets,
-  Factory,
+  Filter,
   Globe2,
+  Gauge,
   HomeIcon,
   Landmark,
   Users,
-  Recycle,
-  ShieldCheck,
+  Waves,
 } from "lucide-react";
 import { AnimatedItem, AnimatedSection, MotionDiv } from "@/components/animated";
 import { ButtonLink } from "@/components/button";
@@ -17,7 +17,7 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { assets, partners, projects, services, stats } from "@/lib/site-data";
 
-const serviceIcons = [Droplets, Factory, Recycle, ShieldCheck];
+const serviceIcons = [Gauge, Filter, Waves, Droplets];
 const heroStats = [
   { icon: Users, value: "100%", label: "Satisfied Clients" },
   { icon: Globe2, value: "45+", label: "Project Partners" },

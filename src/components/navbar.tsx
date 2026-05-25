@@ -15,8 +15,13 @@ export function Navbar() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" onClick={() => setIsOpen(false)}>
-        <Image src={assets.logo} alt="Norwa Waters logo" width={44} height={44} />
-        <span>Norwa Waters</span>
+        <Image
+          priority
+          src={assets.logo}
+          alt="Norwa Waters logo"
+          width={190}
+          height={69}
+        />
       </Link>
 
       <button
